@@ -45,6 +45,7 @@ Under the hood, the script runs through the same steps every time:
 - **Booking funnel**: `P(Booking) = P(Start) x P(Complete | Start)`. Of all sessions, ~20% start checkout and ~14% complete a booking; the treatment is designed to act specifically on the `P(Complete | Start)` step, shown above as the Treatment Impact Zone.
 - **Primary metric, checkout completion rate** = `P(Complete | Start Checkout)`, the probability a user completes booking given that they started checkout.
 - **Secondary metric, overall booking conversion** = the share of all sessions that end in a completed booking.
+- **Lift** = the difference between Treatment and Control on a given metric, reported two ways below: absolute lift, the raw percentage-point gap (e.g. 70.8% minus 68.0% equals +2.8 pp), and relative lift, that same gap expressed as a percentage of the Control baseline (2.8 divided by 68.0 equals +4.1%).
 - **Randomization check**: a chi-squared test on the Control/Treatment sample split and price distributions, used to confirm the split was actually random before comparing the groups.
 - **Significance tests**: one-sided two-proportion z-tests on both metrics, followed by a logistic regression controlling for listing characteristics as a robustness check.
 
